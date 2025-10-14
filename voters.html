@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Voting System - Voter</title>
+    <link rel="stylesheet" href="voters.css">
+</head>
+<body>
+<div class="container">
+    <h1>Voter Login</h1>
+    <input type="text" id="voterId" placeholder="Enter Voter ID">
+    <button onclick="login()">Login</button>
+    <div id="votingSection" style="display:none;">
+        <h2>Vote for your Candidate</h2>
+        <div class="candidates">
+            <div class="candidate">
+                <input type="radio" name="candidate" value="Alice" id="alice">
+                <label for="alice">Alice</label>
+            </div>
+            <div class="candidate">
+                <input type="radio" name="candidate" value="Bob" id="bob">
+                <label for="bob">Bob</label>
+            </div>
+            <div class="candidate">
+                <input type="radio" name="candidate" value="Charlie" id="charlie">
+                <label for="charlie">Charlie</label>
+            </div>
+        </div>
+        <button onclick="submitVote()">Submit Vote</button>
+    </div>
+
+    <div id="confirmation" style="display:none; margin-top:20px; color: green;">
+        Thank you for voting!
+    </div>
+</div>
+
+<script src="voters.js"></script>
+</body>
+</html>
