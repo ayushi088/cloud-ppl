@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting Admin Dashboard</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard - Cloud E-Voting</h1>
+
+        <div class="section">
+            <h2>Add Voter</h2>
+            <input type="text" id="voterName" placeholder="Voter Name">
+            <input type="text" id="voterID" placeholder="Voter ID (UPX1234567)">
+            <button onclick="addVoter()">Add Voter</button>
+        </div>
+
+        <div class="section">
+            <h2>Remove Voter</h2>
+            <input type="text" id="removeVoterID" placeholder="Voter ID">
+            <button onclick="removeVoter()">Remove Voter</button>
+        </div>
+
+        <div class="section">
+            <h2>Registered Voters</h2>
+            <button onclick="viewVoters()">Refresh List</button>
+            <ul id="votersList"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Voting Results</h2>
+            <button onclick="viewResults()">View Results</button>
+            <ul id="resultsList"></ul>
+        </div>
+    </div>
+
+    <script src="1.js"></script>
+</body>
+</html>
