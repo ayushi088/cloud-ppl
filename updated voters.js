@@ -5,10 +5,10 @@ function login() {
         return;
     }
 
-    localStorage.setItem('loggedIn', 'true');
     document.getElementById('loginSection').style.display = 'none';
     document.getElementById('votingSection').style.display = 'block';
 }
+
 
 function submitVote() {
     const selectedCandidate = document.querySelector('input[name="candidate"]:checked');
@@ -16,14 +16,14 @@ function submitVote() {
         alert("Please select a candidate");
         return;
     }
-    localStorage.setItem('vote', selectedCandidate.value);   
+
     document.getElementById('votingSection').style.display = 'none';
     document.getElementById('confirmation').style.display = 'block';
 }
+
 window.onload = function() {
-    const loggedIn = localStorage.getItem('loggedIn');
-    if (loggedIn === 'true') {
-        document.getElementById('loginSection').style.display = 'none';
-        document.getElementById('votingSection').style.display = 'block';
-    }
+    document.getElementById('loginSection').style.display = 'block';
+    document.getElementById('votingSection').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'none';
 };
+
