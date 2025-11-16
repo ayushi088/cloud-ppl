@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="voters.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Online Voting System</h1>
+
+        <div id="loginSection" class="card">
+            <h2>Voter Login</h2>
+            <input type="text" id="voterId" placeholder="Enter your Voter ID">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="votingSection" class="card" style="display: none;">
+            <h2>Select a Candidate</h2>
+
+            <label class="option">
+                <input type="radio" name="candidate" value="Rahul Sharma">
+                Rahul Sharma
+            </label>
+
+            <label class="option">
+                <input type="radio" name="candidate" value="Priya Singh">
+                Priya Singh
+            </label>
+
+            <label class="option">
+                <input type="radio" name="candidate" value="Arjun Mehta">
+                Arjun Mehta
+            </label>
+
+            <button onclick="submitVote()">Submit Vote</button>
+        </div>
+
+        <div id="confirmation" class="card" style="display: none;">
+            <h2>✅ Vote Submitted Successfully!</h2>
+            <p>Your vote has been recorded. Thank you for voting!</p>
+        </div>
+
+    </div>
+
+    <script src="voters.js"></script>
+</body>
+</html>
